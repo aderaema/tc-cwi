@@ -1,0 +1,51 @@
+[build-system]
+requires = ["uv_build>=0.13.1,<0.14.0"]
+build-backend = "uv_build"
+
+[project]
+name = "tc-cwi"
+version = "0.1.0"
+description = "Time-Stretching Method for Temperature Compensation in Ultrasonic SHM - Coda Wave Interferometry (CWI) toolkit."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy",
+    "scipy",
+]
+
+[dependency-groups]
+dev = [
+    "pytest",
+    "pytest-cov",
+    "ruff",
+    "tc-cwi[scripts]",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["scripts"]
+
+# Explicit rule set and excludes: ruff's implicit defaults grow between releases, so
+# this gate spells out what it checks and must not start failing on an unrelated
+# `uv sync`. Kept out on purpose: RUF001/003 (they want the "x" and "sigma" in
+# print() and comments replaced by ASCII), SIM (it prefers `key in f` over the
+# explicit h5py `f.keys()` filter, and `T[-1] < T * 1.2` over `T * 1.2 > T[-1]`),
+# BLE001 (load_data skips one unreadable SEG-2 file instead of aborting a dataset),
+# E5 (the few lines still over 88 chars after formatting are single f-strings the
+# formatter will not split) and the demo notebook, which is prose + long lines.
+[tool.ruff]
+target-version = "py311"
+
+[tool.ruff.lint]
+select = [
+    "E4", "E7", "E9", "F",     # pycodestyle (errors) + pyflakes
+    "B",                        # bugbear
+    "I", "UP", "C4",            # import order, modern syntax, comprehensions
+    "FURB122", "RUF015", "RUF022", "RUF046",  # the few specific rules worth their noise
+]
+
+[tool.coverage.run]
+source = ["tc_cwi"]
+branch = true
+
+[tool.coverage.report]
+show_missing = true
