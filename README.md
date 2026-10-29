@@ -2,7 +2,7 @@
 
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Build System](https://img.shields.io/badge/build-uv__build-blueviolet)](https://github.com/astral-sh/uv)
-[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/aderaema/US-EOC-compensation-toolbox/blob/main/LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/aderaema/tc-cwi/blob/main/LICENSE)
 
 Lightweight Python toolbox for **Environmental and Operational Condition (EoC) compensation** in ultrasonic Structural Health Monitoring (SHM), using **Coda Wave Interferometry (CWI)** and the **Time-Stretching method**.
 
@@ -121,7 +121,7 @@ x, decorrelation = find_optimum(reference, current, t, stretch, (-1e-2, 1e-2))
 This project uses [`uv`](https://github.com/astral-sh/uv) with the `uv_build` backend:
 
 ```bash
-git clone https://github.com/aderaema/US-EOC-compensation-toolbox.git tc-cwi
+git clone https://github.com/aderaema/tc-cwi.git tc-cwi
 cd tc-cwi
 uv sync
 ```
@@ -146,7 +146,7 @@ uv run pytest --cov   # statements + branches, with the missing lines
 uv run ruff check .
 ```
 
-Releasing to PyPI: bump `version` in `pyproject.toml`, build, and push a matching tag. The [publish workflow](https://github.com/aderaema/US-EOC-compensation-toolbox/blob/main/.github/workflows/publish.yml) lints, builds, tests the built distributions in isolation, and publishes them to PyPI:
+Releasing to PyPI: bump `version` in `pyproject.toml`, build, and push a matching tag. The [publish workflow](https://github.com/aderaema/tc-cwi/blob/main/.github/workflows/publish.yml) lints, builds, tests the built distributions in isolation, and publishes them to PyPI:
 
 ```bash
 git commit -am "chore: release v0.1.3"
@@ -166,4 +166,4 @@ uv publish
 
 ## License
 
-[MIT](https://github.com/aderaema/US-EOC-compensation-toolbox/blob/main/LICENSE)
+[MIT](https://github.com/aderaema/tc-cwi/blob/main/LICENSE)
