@@ -4,7 +4,7 @@ build-backend = "uv_build"
 
 [project]
 name = "tc-cwi"
-version = "0.1.4"
+version = "0.1.5"
 description = "Python toolbox to apply EOC compensation algorithms to ultrasonic testing data."
 readme = "README.md"
 license = "MIT"

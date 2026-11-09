@@ -3,6 +3,7 @@
 [![Python 3.11+](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/downloads/)
 [![Build System](https://img.shields.io/badge/build-uv__build-blueviolet)](https://github.com/astral-sh/uv)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/aderaema/tc-cwi/blob/main/LICENSE)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24077015.svg)](https://doi.org/10.5281/zenodo.24077015)
 
 Lightweight Python toolbox for **Environmental and Operational Condition (EoC) compensation** in ultrasonic Structural Health Monitoring (SHM), using **Coda Wave Interferometry (CWI)** and the **Time-Stretching method**.
 
@@ -18,6 +19,12 @@ Temperature variations change the apparent wave velocity of ultrasonic guided wa
 Developed as part of WP3, Deliverable D3.3.
 
 The core Time-Stretching CWI algorithm and original code were developed in MATLAB by Arnaud Deraemaeker, Jitendra Kumar Sharma, and the BATir research group at ULB (Université Libre de Bruxelles). Python translation, packaging, test harness, and ongoing maintenance are performed by Zensor (Damiano Gianotti and Arthur Gossuin).
+
+## USES2 Project & Official Links
+
+- **USES2 WP3 GitLab Repository:** [https://gitlab.com/uses2project/wp3/tc-cwi](https://gitlab.com/uses2project/wp3/tc-cwi)
+- **Zenodo Software Record (DOI):** [https://doi.org/10.5281/zenodo.24077015](https://doi.org/10.5281/zenodo.24077015)
+- **Reproducible Workflows:** [https://github.com/Zensor-BE/tc-cwi-workflows](https://github.com/Zensor-BE/tc-cwi-workflows)
 
 ---
 
